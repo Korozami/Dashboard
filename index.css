@@ -1,7 +1,11 @@
+body {
+    margin: 0;
+    background-color: snow;
+}
 .container {
     display: grid;
     grid-template-columns: 300px repeat(4, 1fr);
-    grid-template-rows: 200px repeat(3, 1fr);
+    grid-template-rows: 200px 1fr;
 }
 
 .dashboard {
@@ -9,10 +13,11 @@
     grid-column: 1 / 2;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px repeat(5, 1fr);
+    grid-template-rows: 100px repeat(3, 1fr);
 }
 
 .dashboard h2 {
+    margin-left: 10px;
     grid-row: 1 / 2;
     font-size: 40px;
 }
@@ -21,30 +26,25 @@
     margin-right: 10px;
 }
 
-.first-list{
-    grid-row: 2 / 3;
-}
-
-.second-list {
-    grid-row: 3 / 6;
-}
-
 .dashboard ul {
     list-style-type: none;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .dashboard li i{
     margin-top: 10px;
     margin-right: 10px;
+    font-size: 25px;
 }
 
 .header{
+    margin-top: 0;
     grid-row: 1 / 2;
     grid-column: span 5;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 3fr;
+    background-color: #e6e6e6;
 }
 
 .header-section-one {
@@ -146,7 +146,6 @@
     grid-column: span 5;
     display: grid;
     grid-template-columns: 4fr 1fr;
-    grid-template-rows: repeat(2, 1fr);
 }
 
 .projects {
@@ -161,7 +160,7 @@
 
 .project-container div {
     margin: 0% 0% 5% 0%;
-    border: 1px solid;
+    border: 1px solid rgb(226, 226, 231);
     border-radius: 10px;
     padding: 3%;
     width: 80%;
@@ -169,8 +168,13 @@
     border-left-color: rgb(210, 232, 225);
 }
 
-.announcement-container {
-    border: .5px solid;
+.project-content p {
+    color: rgb(104, 104, 104);
+}
+
+.side-container {
+    border: .5px solid rgb(226, 226, 231);
+    border-radius: 10px;
     padding: 3%;
     padding-left: 15%;
     padding-right: 13%;
@@ -192,4 +196,43 @@
 .announcement-content p {
     margin-top: 0;
     margin-bottom: 10%;
+    color: rgb(104, 104, 104);
+}
+
+.trending-content {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    justify-content: center;
+}
+
+.trending-side-container {
+    border: .5px solid rgb(226, 226, 231);
+    border-radius: 10px;
+    padding: 3%;
+    padding-left: 0;
+    padding-right: 13%;
+}
+
+.trending-img {
+    margin: 0;
+    align-self: center;
+}
+
+.trending-img img {
+    width: 50px;
+    border-radius: 50px;
+    float: right;
+}
+
+.trending-info {
+    margin-left: 10px;
+}
+
+.trending-info h3 {
+    margin-bottom: 5px;
+}
+
+.trending-info p {
+    margin-top: 0;
+    color: rgb(104, 104, 104);
 }
